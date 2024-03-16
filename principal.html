@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Civil Engennering</title>
+    <meta name="description" content="Descrição da Página">
+    <link  rel="stylesheet" href="principal.css">
+    <link  rel="stylesheet" href="principal.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+ <nav class="nav-bar">
+    <div class=" nav_logo"> <a hred="#">BIULD</a></div>
+
+    <ul class="nav_items" id="menu">
+       <li class="limk"><a href="#slideshow-container">HOME</a></li>
+       <li class="limk"><a href="#header">sobre</a></li>
+       <li class="limk"><a href="#servicos">serviços</a></li>
+       <li class="limk"><a href="#projectos">Projectos</a> </li>
+       <li class="limk"><a href="#contactos">Contactos</a> </li>
+    </ul>
+    <div class="hamburguer" onclick="menuShow()">☰</div>
+ </nav>
+
+
+ 
+ <div class="menuMobile">
+ <ul>
+<li class="limk"><a href="#slideshow-container">HOME</a></li>
+   <li class="limk"><a href="#header">sobre</a></li>
+   <li class="limk"><a href="#servicos">serviços</a></li>
+   <li class="limk"><a href="#projectos">Projectos</a> </li>
+   <li class="limk"><a href="#contactos">Contactos</a> </li>
+
+</ul>
+  </div>
+ 
+ <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="engenharia.jpeg" width="1350px" height="700px">
+        <div class="centered" id="text-container">
+        <div class="carousel-caption"><h1>Construindo sonhos, edificando realidades. Sua visão, nossa missão!</h1></div>
+        </div>
+   
+        </div>
+    <div class="mySlides fade">
+        <img src="casaboa.jpg" width="1350px" height="700px">
+       <div class="centered" id="text-container">
+        <div class="carousel-caption"><h1>Qualidade que se vê, confiança que se constrói. Seu projeto, nossa expertise!</h1></div> 
+      </div>
+     
+    </div>
+    <div class="mySlides fade">
+        <img src="obra.jpg" width="1350px" height="700px">
+       <div class="centered" id="text-container">
+        <div class="carousel-caption"><h1>Construímos lares que acolhem histórias e edifícios que transformam cidades.</h1></div>
+      </div>
+     
+    </div>
+    <div class="mySlides fade">
+        <img src="obragrande.jpg" width="1350px" height="700px">
+        <div class="centered" id="text-container">
+        <div class="carousel-caption"><h1>Construção civil com compromisso e qualidade. Seu projeto, nossa dedicação!</h1> </div>
+    </div>
+
+    </div>
+
+   
+
+</div>
+<script>
+    let slideIndex = 0;
+    let text = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 7000); // Change image every 2 seconds
+}
+    function menuShow() {
+        var navItems = document.querySelector('.menuMobile');
+    if (navItems.classList.contains('open')){
+        navItems.classList.remove('open');
+    } else {
+        navItems.classList.add('open');
+    }
+}
+
+$(document).ready(function(){
+        $(".row").owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:2,
+                    nav:false
+                },
+                1000:{
+                    items:3,
+                    nav:true,
+                    loop:false
+                }
+            }
+        });
+    });
+
+showSlides(); // Initial call to start the slideshow
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+ 
+ 
+ <header class="header">
+    <div class="header_container">
+        <div class="header_content">
+            <h1> <div class="quebra">Mais do que</div> infraestruturas, construimos Sonhos</h1>
+           
+            <a href="#" class="saiba-mais">Saiba Mais</a>
+        </div>
+        
+        <div class="header_image">
+            <img src="construcao-civil.jpg" alt="header" width="750px" height="2000px">
+
+        </div>
+    </div>
+      
+ </header>
+
+ <section class="servicos">
+
+    <h1> Nossos Serviços</h1>
+
+    <div class="row">
+         <div class="caixa">
+            <i class="fa-solid fa-city"></i>
+             <h2>Arquitecura</h2>
+             <p>Oferecemos serviços de arquitetura especializados para projetos de construção civil, garantindo soluções funcionais, estéticas e sustentáveis para cada cliente.</p>
+         </div>
+
+        <div class="caixa">
+            <i class="fa-solid fa-house-circle-check"></i>
+             <h2>Estrutura</h2>
+             <p>Oferecemos serviços de arquitetura especializados para projetos de construção civil, garantindo soluções funcionais, estéticas e sustentáveis para cada cliente.</p>
+         </div>
+
+         <div class="caixa">
+            <i class="fa-solid fa-droplet"></i>
+            <i class=""></i>
+             <h2>Hidráulica</h2>
+             <p>Oferecemos serviços de arquitetura especializados para projetos de construção civil, garantindo soluções funcionais, estéticas e sustentáveis para cada cliente.</p>
+         </div>
+
+         <div class="caixa">
+            <i class="fa-solid fa-plug"></i>
+             <h2>Eletricidade</h2>
+             <p> Com profissionais qualificados e experiência no setor, garantimos soluções seguras e eficientes para o seu projeto. Entre em contato para um orçamento personalizado.</p>
+         </div>
+
+         <div class="caixa">
+            <i class="fa-solid fa-money-check-dollar"></i>
+             <h2>Mapa de quantidades e Orçamento</h2>
+             <p>Oferecemos serviços de orçamento especializados para sites de construção civil, garantindo precisão e transparência em cada projeto.</p>
+         </div>
+
+         <div class="caixa">
+            <i class="fa-sharp fa-solid fa-pen-ruler"></i>
+             <h2>Design de Interiores</h2>
+             <p>Design de interiores que inspira. Seu espaço, nossa criatividade.</p>
+         </div>
+
+
+         <div class="service-mobile">
+            <ul id="myList" class= "hidden">
+            
+                <li><a href="#" class="quebra">Arquitecura</a></li>
+                <li> <a href="#" class="quebra">Estrutura</a></li>
+                <li><a  href="#" class="quebra"> Hidráulica</a></li>
+                <li><a  href="#" class="quebra">Eletricidade</a></li>
+                <li><a  href="#" class="quebra">Mapa de quantidades e Orçamento</a></li>
+                <li><a href="#"  class="quebra">Design de Interiores</a></li>
+              
+            </ul>
+
+            <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById("myList").classList.add("visible");
+    }, 3000); // 3000 milliseconds (3 seconds) delay
+});
+            </script>
+
+         </div>
+    </div>
+
+
+    
+ </section>
+
+ <footer>
+
+ <div class="contactos">
+    <div class="left Section">
+        <h2>Sobre nós</h2>
+        <p> Estamos comprometidos em oferecer os mais altos padrões de qualidade e excelência em cada projeto que realizamos.</p>
+        </div>
+
+        <div class="socialmedia Section">
+            <h2 class="quebra">Nossas redes sociais</h2>
+                <div class="conteudo1">
+         <a href="#"><i class="fa-brands fa-linkedin"></i><p>Engenharia e construção</p></a>
+         <a href="#"><i class="fa-brands fa-facebook"></i><p>Engenharia e construção</p> </a>
+         <a href="#"><i class="fa-brands fa-instagram"></i> <p>Engenharia e construção</p></a>
+         <a href="#"><i class="fa-brands fa-tiktok"></i><p>Engenharia e construção</p></a>
+        </div>
+    </div>
+   
+    <div class="center Section">
+        <h2>Contacte-nos</h2>
+        <div class="conteudo">
+             <div class="place">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="text"> Maputo, MOÇAMBIQUE</span>
+             </div>
+
+             <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                <span class="text"> +258 856734567</span>
+             </div>
+
+             <div class="email">
+                 <i class="fa-solid fa-envelope"></i>
+                <span class="text"> engenhariaeconstrucao@gmail.com</span>
+             </div>
+
+        </div>
+    </div>
+ </div>
+
+ <div class="footer-bottom">
+    <center>
+        <div> <h2><span> &copy; Engenharia e Construção. Powered by Télcia Hele</span></h2></div>
+    </center>
+</div>
+
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,1 @@
+ScrollReveal().reveal('.header_container', { delay: 2000 });
